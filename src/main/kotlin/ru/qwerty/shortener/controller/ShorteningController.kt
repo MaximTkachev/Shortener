@@ -9,10 +9,10 @@ import ru.qwerty.shortener.service.ShorteningService
 
 @RestController
 @RequestMapping("/api/v1")
-class ShorteningController(val service: ShorteningService) {
+class ShorteningController(private val service: ShorteningService) {
 
     @PostMapping
     fun shorten(@RequestParam link: String): ShortenLinkResponse {
-        return ShortenLinkResponse(service.create(link));
+        return ShortenLinkResponse(service.create(link))
     }
 }
