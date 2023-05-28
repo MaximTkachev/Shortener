@@ -6,7 +6,7 @@ import ru.qwerty.shortener.repository.LinkRepository
 import ru.qwerty.shortener.repository.entity.LinkEntity
 import ru.qwerty.shortener.service.ShorteningService
 import ru.qwerty.shortener.util.ShortLinkGenerator
-import java.util.*
+import java.util.Date
 
 @Service
 class DefaultShorteningService(
