@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 import ru.qwerty.shortener.service.ShorteningService
 
 @RestController
-class RedirectionController(val service: ShorteningService) {
+class RedirectionController(private val service: ShorteningService) {
 
     @GetMapping("/{link}")
     fun redirect(@PathVariable link: String, response: HttpServletResponse): ResponseEntity<Unit> {
