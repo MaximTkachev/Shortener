@@ -1,4 +1,4 @@
-create table public.link
+create table link
 (
     id bigserial primary key,
     creation_date date,
@@ -8,4 +8,4 @@ create table public.link
     uses_count integer not null
 );
 
-alter table public.link owner to shortener;
+alter table link owner to shortener;

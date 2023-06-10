@@ -1,14 +1,6 @@
 package ru.qwerty.shortener.util
 
-import org.springframework.stereotype.Component
+interface ShortLinkGenerator {
 
-@Component
-class ShortLinkGenerator {
-
-    private var x = 0
-
-    fun generate(): String {
-        x++
-        return x.toString()
-    }
+    fun generate(): String
 }
