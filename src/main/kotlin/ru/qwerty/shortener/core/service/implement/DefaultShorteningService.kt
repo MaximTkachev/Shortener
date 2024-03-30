@@ -8,6 +8,7 @@ import ru.qwerty.shortener.core.repository.entity.LinkEntity
 import ru.qwerty.shortener.core.service.ShortLinkGenerator
 import ru.qwerty.shortener.core.service.ShorteningService
 import ru.qwerty.shortener.exception.NotFoundException
+import ru.qwerty.shortener.model.ShortenLinkResponse
 import java.util.Date
 
 @Service
@@ -28,10 +29,10 @@ class DefaultShorteningService(
     }
 
     @Transactional
-    override fun create(link: String): String {
+    override fun create(link: String): ShortenLinkResponse {
         val shortLink = generator.generate()
         repository.save(LinkEntity(shortLink = shortLink, originalLink = link))
 
-        return properties.host + "/" + shortLink
+        return ShortenLinkResponse(properties.host + "/" + shortLink)
     }
 }

@@ -13,6 +13,6 @@ class ShorteningController(private val service: ShorteningService) {
 
     @PostMapping
     fun shorten(@RequestParam link: String): ShortenLinkResponse {
-        return ShortenLinkResponse(service.create(link))
+        return service.create(link)
     }
 }
