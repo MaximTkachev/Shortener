@@ -1,9 +1,9 @@
 application:
-  host: localhost:8080
+  host: http://localhost:8080
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/shortener
+    url: jdbc:postgresql://db:5432/shortener
     username: shortener
     password: shortener
     driver-class-name: org.postgresql.Driver

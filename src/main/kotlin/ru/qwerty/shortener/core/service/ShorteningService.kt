@@ -1,4 +1,4 @@
-package ru.qwerty.shortener.service
+package ru.qwerty.shortener.core.service
 
 interface ShorteningService {
 

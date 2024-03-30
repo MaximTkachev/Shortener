@@ -1,4 +1,4 @@
-package ru.qwerty.shortener.repository.entity
+package ru.qwerty.shortener.core.repository.entity
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
