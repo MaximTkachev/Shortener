@@ -1,4 +1,4 @@
-package ru.qwerty.shortener.controller
+package ru.qwerty.shortener.api
 
 import jakarta.servlet.http.HttpServletResponse
 import org.springframework.http.HttpHeaders
@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
-import ru.qwerty.shortener.service.ShorteningService
+import ru.qwerty.shortener.core.service.ShorteningService
 
 @RestController
 class RedirectionController(private val service: ShorteningService) {
